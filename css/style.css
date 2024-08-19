@@ -1,0 +1,1236 @@
+:root {
+    --Primary: #DB4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: var(--color);
+}
+
+body h4 {
+    font-size: 20px;
+    color: var(--color);
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+/*     ======      Sart index HTML     ======      */
+
+.up {
+    position: fixed;
+    right: 10px;
+    bottom: 15px;
+    cursor: pointer;
+    display: none;
+}
+.up i {
+    font-size: 24px;
+    transition: .3s;
+}
+.up i:hover {
+    color: var(--Primary);
+}
+
+
+/* Start nav */
+.navbar {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+}
+.navbar .container{
+    position: relative;
+}
+.navbar .container .collapse ul li a {
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: .3s;
+}
+.navbar .container .collapse ul li a:hover, .navbar .container .collapse form #searchI:hover, .navbar .container .collapse form #cart:hover, .navbar .container .collapse ul li .active{
+    color: var(--Primary);
+}
+.navbar .container .collapse ul li{
+    position: relative;
+}
+.navbar .container .collapse ul li .active::after, .navbar .container .collapse ul li a:hover::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: var(--Primary);
+    position: absolute;
+    bottom: 4px;
+    left: 9px;
+}
+
+.navbar .container .collapse form i {
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+}
+.navbar .container .collapse form a {
+    text-decoration: none;
+    color: black;
+}
+.navbar .container .collapse form a #cart {
+    position: relative;
+}
+.navbar .container .collapse form a #cart span {
+    position: absolute;
+    top: -12px;
+    left: -4px;
+    font-size: 12px;
+    color: white;
+    min-width: 15px;
+    min-height: 15px;
+    text-align: center;
+    background-color: var(--Primary);
+    border-radius: 50%;
+    padding: 2px;
+}
+
+
+.navbar .container .collapse form .user {
+    background-color: var(--Primary);
+    color: white;
+    border-radius: 50%;
+    font-size: 16px;
+}
+.navbar .container .collapse form #user-cart:hover {
+    color: var(--Primary);
+}
+.navbar .container .collapse form .account {
+    position: absolute;
+    top: 100%;
+    right:0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(75px);
+    border-radius: 6px;
+}
+.navbar .container .collapse form .account-display {
+    display: none;
+}
+.navbar .container .collapse form .account::before {
+    content: '';
+    border-bottom: 10px solid rgba(0, 0, 0, 0.7);
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -20px;
+    right: 13px;
+    backdrop-filter: blur(75px);
+}
+.navbar .container .collapse form .account a {
+    color: white;
+    font-weight: 300;
+}
+.navbar .container .collapse form .account a:hover{
+    color: var(--Primary);
+}
+.navbar .container .collapse form .account .cancel:hover .fa-xmark{
+    border-color: var(--Primary);
+}
+.navbar .container .collapse form .account a .fa-xmark {
+    border: 2px solid white;
+    font-size: 16px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+/* End nav */
+
+
+/* Sart head */
+.head {
+    position: relative;
+    height: 75vh;
+    background: url(../images/hero4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.head .container .row .left-head {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.head .container .row .left-head ul li {
+    margin-bottom: 15px;
+    position: relative;
+    list-style: none;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: default;
+}
+.head .container .row .left-head ul li:hover {
+    color: var(--Primary);
+}
+.head .container .row .left-head ul .drop {
+    cursor: pointer;
+}
+.head .container .row .left-head ul .drop::after {
+    content: '>';
+    position: absolute;
+    right: 10px;
+    font-weight: bold;
+}
+.head .container .row .left-head .drop-woman, .head .container .row .left-head .drop-men {
+    display: inline-block;
+    background-color: white;
+    padding: 15px;
+    position: absolute;
+    right: -150px;
+    display: none;
+    transition: 0.3s;
+}
+.head .container .row .left-head .display {
+    display: block;
+}
+
+.head .container .row .right-head {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 65vh;
+    overflow: hidden;
+}
+.head .container .row .right-head .logo div p {
+    color: #FAFAFA;
+    font-weight: 300;
+}
+.head .container .row .right-head .logo .offer {
+    color: #FAFAFA;
+    font-size: 32px;
+    font-weight: bold;
+}
+.head .container .row .right-head .logo, .head .container .row .right-head .logo div p {
+    display: inline-block;
+}
+.head .container .row .right-head .logo img {
+    width: 40px;
+}
+.head .container .row .right-head .logo a, .head .container .row .right-head .logo i{
+    position: relative;
+    color: #FAFAFA;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+.head .container .row .right-head .logo a::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #FAFAFA;
+    position: absolute;
+    bottom: -6px;
+}
+
+.head .container .row .right-head .iphone {
+    width: 100%;
+}
+/* End head */
+
+
+
+/* Start Today’s */
+
+.container h2 {
+    position: relative;
+    color: var(--Primary);
+    font-size: 24px;
+}
+.container h2::before {
+    position: absolute;
+    left: -30px;
+    content: '';
+    height: 100%;
+    width: 20px;
+    background-color: var(--Primary);
+    border-radius: 5px;
+}
+.container .today .timer {
+    display: flex;
+    justify-content: space-between;
+}
+.container .buttons span {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 7px ;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    font-size: 18px;
+    cursor: pointer;
+}
+.container .buttons span:hover {
+    color: var(--Primary);
+}
+
+.container .scroll {
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.container .scroll::-webkit-scrollbar {
+    width: 0;
+}
+
+.container .scroll .item-card {
+    position: relative;
+    min-height: 380px;
+    min-width: 280px;
+    background-color: #F5F5F5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.container .scroll .item-card .img {
+    position: relative;
+    height: 55%;
+}
+.container .scroll .item-card .dicsount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--Primary);
+    color: white;
+    border-radius: 5px;
+}
+.container .scroll .item-card .img img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container .scroll .item-card .img button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    padding: 4px 0;
+}
+.container .scroll .item-card h3 {
+    font-size: 17px;
+    font-weight: bold;
+}
+.container .scroll .item-card .price .new-price{
+    color: var(--Primary);
+}
+.container .scroll .item-card .price .old-price {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.5);
+}
+.container .scroll .item-card .icons i {
+    color: #FFAD33;
+    font-size: 14px;
+}
+
+.container .end-button {
+    display: flex;
+    justify-content: center;
+}
+.container .end-button button {
+    border: none;
+    outline: none;
+    background-color: var(--Primary);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: .2s;
+}
+.container .end-button button:hover {
+    opacity: .8;
+}
+
+/* End Today’s */
+
+
+
+/* Sart Categories */
+
+.container .browser-category {
+    display: flex;
+    justify-content: space-between;
+}
+.container .browser-category h4 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.container .categories .scroll .card {
+    min-width: 170px;
+    min-height: 145px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.container .categories .scroll .card:hover {
+    background-color: var(--Primary);
+    color: white;
+    border: 1px solid white;
+}
+.container .categories .scroll .active {
+    background-color: var(--Primary);
+    color: white;
+    border: 1px solid white;
+}
+
+/* End Categories */
+
+
+
+
+
+/* Start Month */
+.container .month .browser-category button {
+    background-color: var(--Primary);
+    color: white;
+    border: none;
+    outline: none;
+    padding: 16px 48px;
+    border-radius: 5px;
+}
+.container .month .browser-category button:hover {
+    opacity: .8;
+}
+.container .month .row .item-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.container .month .row .item-card .img {
+    min-height: 64%;
+    border-radius: 5px;
+}
+.container .month .row .item-card .img1{
+    background: url(../images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container .month .row .item-card .img2{
+    background: url(../images/547953_9C2ST_8746_001_082_0000_Light-Gucci-Savoy-medium-duffle-bag\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container .month .row .item-card .img3{
+    background: url(../images/gammaxx-l240-argb-1-500x500\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container .month .row .item-card .img4{
+    background: url(../images/sam-moghadam-khamseh-L_7MQsHl_aU-unsplash\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container .month .row .item-card .price .new-price{
+    color: var(--Primary);
+}
+.container .month .row .item-card .price .old-price {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.5);
+}
+.container .month .row .item-card .icons i {
+    color: #FFAD33;
+    font-size: 14px;
+}
+
+/* End Month */
+
+
+
+.container .scroll .item-card .price i {
+    color: #FFAD33;
+    font-size: 14px;
+}
+
+
+/* Sart Featured */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(8, auto);
+    gap: 20px;
+}
+
+
+.grid .one {
+    grid-column: span 3;
+    grid-row: span 8;
+    height: 70vh;
+    background-color: black;
+}
+.grid .one .img {
+    background: url(../images/ps5-slim-goedkope-playstation_large\ 1.png);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.grid .img .content {
+    height: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.grid .img .content h5, .grid .img .content p, .grid .img .content a {
+    color: white;
+    text-decoration: none;
+}
+.grid .img .content h5 {
+    cursor: pointer;
+}
+.grid .img .content p {
+    font-size: 14px;
+    width: 70%;
+}
+.grid .img .content a {
+    width: fit-content;
+    position: relative;
+}
+.grid .img .content a::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #FAFAFA;
+    position: absolute;
+    bottom: 0px;
+}
+
+.grid .two {
+    grid-column: 4 / span 6;
+    grid-row: span 4;
+    height: calc(35vh - 10px);
+    background-color: #0D0D0D;
+}
+.grid .two .img {
+    background: url(../images/attractive-woman-wearing-hat-posing-black-background\ 1.png);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+.grid .three {
+    grid-column: 4 / span 3;
+    grid-row: 5 /span 4;
+    height: calc(35vh - 10px);
+    background-color: #0D0D0D;
+}
+.grid .three .img {
+    background: url(../images/69-694768_amazon-echo-png-clipart-transparent-amazon-echo-png\ 1\ \(1\).png);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid .four {
+    grid-column: 7 / span 3;
+    grid-row: 5 /span 4;
+    height: calc(35vh - 10px);
+    background-color: #0D0D0D;
+}
+.grid .four .img {
+    background: url(../images/652e82cd70aa6522dd785109a455904c.png);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container .service {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 130px;
+    cursor: default;
+    margin-bottom: 120px;
+}
+.container .service .service-card {
+    text-align: center;
+}
+.container .service .service-card h4 {
+    font-weight: bold;
+}
+/* End Featured */
+
+
+
+
+/* Sart footer */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.footer, .footer .exclusive input {
+    background-color: black;
+}
+.footer a, .footer p, .footer h3, .footer input {
+    text-decoration: none;
+    color: white;
+}
+.footer .exclusive a {
+    font-weight: 500;
+    font-size: 18px;
+}
+.footer p {
+    font-weight: 200;
+}
+.footer input {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.footer form {
+    position: relative;
+}
+.footer form svg {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+.footer .support, .footer .account, .footer .quick-Link, .footer .download-app {
+    display: flex;
+    flex-direction: column;
+}
+.footer a {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+    transition: .3s;
+}
+.footer a:hover{
+    color: var(--Primary);
+}
+
+.footer .download-app .links {
+    display: flex;
+    gap: 10px;
+}
+.footer .download-app .links div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer .download-app .websits {
+    display: flex;
+    justify-content: space-around;
+}
+.footer .download-app .websits a i {
+    font-size: 16px;
+}
+/* End footer */
+
+
+/*     ======      End index HTML     ======      */
+
+
+
+
+
+
+
+
+
+
+/*     ======      Start Sign Up HTML     ======      */
+
+
+/* Satrt sign up */
+.sign-up {
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+    flex-wrap: wrap;
+}
+.sign-up .left-sign {
+    background: url(../images/Sign-Up/Side\ Image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sign-up .right-sign span {
+    font-weight: 500;
+}
+.sign-up .right-sign h3 {
+    font-weight: bold;
+}
+.sign-up .right-sign form input {
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+.sign-up .right-sign form{
+    position: relative;
+}
+
+
+.sign-up .right-sign form #span-name {
+    position: absolute;
+    top: 63px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    background-color: white;
+    display: none;
+}
+.sign-up .right-sign form .span-val::before {
+    content: '';
+    border-bottom: 10px solid rgba(0, 0, 0, 0.5);
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -20px;
+}
+.sign-up .right-sign form .span-val i {
+    background-color: #FFAD33;
+    padding: 5px 10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.sign-up .right-sign form #span-email {
+    position: absolute;
+    top: 128px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    background-color: white;
+    display: none;
+}
+
+.sign-up .right-sign form #span-pass {
+    position: absolute;
+    top: 192px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    background-color: white;
+    display: none;
+}
+.sign-up .right-sign form #span-pass .week {
+    color: #DB4444;
+}
+
+.sign-up .right-sign form #eye-slash, .sign-up .right-sign form #eye {
+    position: absolute;
+    right: 10px;
+    top: 170px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7);
+}
+.sign-up .right-sign form #eye {
+    display: none;
+}
+
+
+.sign-up .right-sign form .submit {
+    border: none;
+    background-color: var(--Primary);
+    color: white;
+    border-radius: 5px;
+}
+.sign-up .right-sign form .submit:hover{
+    opacity: .8;
+}
+.sign-up .right-sign button {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.sign-up .right-sign button a {
+    color: #0D0D0D;
+    text-decoration: none;
+}
+
+.sign-up .right-sign .log-in {
+    text-align: center;
+}
+.sign-up .right-sign .log-in a {
+    color: #0D0D0D;
+}
+.sign-up .right-sign .log-in {
+    color: rgba(0, 0, 0, 0.7);;
+}
+/* End sign up */
+
+
+/*     ======      End Sign Up HTML     ======      */
+
+
+
+
+
+/*     ======      Start Log In HTML     ======      */
+.sign-up .right-sign .log-pass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sign-up .right-sign .log-pass input {
+    width: 120px;
+}
+.sign-up .right-sign .log-pass a {
+    color: var(--Primary);
+    text-decoration: none;
+}
+/*     ======      End Log In HTML     ======      */
+
+
+
+
+
+
+/*     ======      Start cart HTML     ======      */
+
+.check-cart {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    display: none;
+}
+.check-cart .contain {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+}
+.check-cart .contain .out {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 400px;
+    height: 260px;
+    background-color: white;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    animation: zoom .5s;
+}
+.check-cart .contain .out .fa-triangle-exclamation {
+    color: #ffa115;
+    font-size: 65px;
+}
+.check-cart .contain .out .fa-xmark {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+.check-cart .contain .out .fa-xmark:hover {
+    color: var(--Primary);
+}
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.container table tbody tr td .product img {
+    width: 50px;
+}
+.container table tbody tr td .product span {
+    position: relative;
+    font-weight: 700;
+}
+.container table tbody tr td .product span i {
+    position: absolute;
+    top: -20px;
+    left: -80px;
+    width: 15px;
+    height: 15px;
+    font-size: 14px;
+    padding-top: 1px;
+    text-align: center;
+    background-color: var(--Primary);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container table tbody tr td {
+    padding: 22px;
+}
+.container table tbody tr td input {
+    width: 70px;
+    padding: 5px 10px;
+}
+
+.container .check-out {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+.container .check-out .coupon input {
+    outline: none;
+}
+.container .check-out .coupon button {
+    border: none;
+    background-color: var(--Primary);
+    color: white;
+}
+.container .check-out button:hover {
+    opacity: .8;
+}
+
+.container .check-out .cart-total {
+    position: relative;
+    width: 350px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    text-align: center;
+}
+.container .check-out .cart-total h5 {
+    text-align: left;
+}
+.container .check-out .cart-total div {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.container .check-out .cart-total .total::after, .container .check-out .cart-total .shipping::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+}
+
+.container .check-out .cart-total button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--Primary);
+    width: 70%;
+}
+
+
+/*     ======      End cart HTML     ======      */
+
+
+
+
+
+
+/*     ======      Start checkout HTML     ======      */
+
+.container .check-out .details form input {
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    margin-bottom: 40px;
+}
+
+
+.container .check-out .order input {
+    outline: none;
+}
+.container .check-out .order .apply, .container .check-out .order .place {
+    border: none;
+    background-color: var(--Primary);
+    color: white;
+}
+.container .check-out .order .place {
+    border-radius: 5px;
+}
+.container .check-out .order .coupon .apply {
+    width: 200px;
+    height: 44px;
+}
+
+.container .check-out .order .checkOut div {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+.container .check-out .order .checkOut div span img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.container .check-out .order .checkOut .totalCheck {
+    display: flex;
+    flex-direction: column;
+}
+.container .check-out .order .checkOut .subtotal::after, .container .check-out .order .checkOut .shipping::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+}
+
+/*     ======      End checkout HTML     ======      */
+
+
+
+
+
+/*     ======      Start Manage My Account HTML     ======      */
+
+.container .left-manage h5 {
+    font-weight: bold;
+    font-size: 18px;
+}
+.container .left-manage ul li {
+    list-style: none;
+}
+.container .left-manage ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    transition: .2s;
+    cursor: default;
+}
+.container .left-manage ul li a:hover {
+    color: var(--Primary);
+}
+
+.container .right-manage h5 {
+    color: var(--Primary);
+}
+.container .right-manage .row label {
+    font-weight: 500;
+}
+.container .right-manage .row .btns {
+    display: flex;
+    justify-content: flex-end;
+}
+.container .right-manage .row .btns button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.container .right-manage .row .btns .save {
+    background-color: var(--Primary);
+    color: white;
+}
+
+/*     ======      End Manage My Account HTML     ======      */
+
+
+
+
+/*     ======      Start About HTML     ======      */
+
+.container .about {
+    margin: 120px 0 ;
+}
+.container .about .left-about {
+    display: flex;
+    align-items: center;
+}
+.container .about .left-about div h3 {
+    font-weight: 600;
+    font-size: 52px;
+}
+.container .about .right-about img {
+    width: 100%;
+}
+.container .about .right-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .about .about-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media(max-width: 500px){
+    .container .about .about-flex {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+.container .about .about-flex .about-card {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.30);
+}
+
+.container .about .about-flex .about-card:hover {
+    background-color: var(--Primary);
+    color: white;
+}
+.container .about .about-flex .about-card:hover p {
+    color: white;
+}
+.container .about .about-flex .about-card:hover .svg{
+    background-color: white;
+    border: 10px solid #E07575;
+}
+.container .about .about-flex .about-card:hover .svg svg path {
+    stroke: black !important;
+}
+.container .about .about-flex .about-card svg {
+    width: 30px;
+    height: 30px;
+}
+.container .about .about-flex .about-card .svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    background-color: black;
+    border: 10px solid rgb(153 153 153);
+    border-radius: 50%;
+}
+.container .about .about-flex .about-card svg path {
+    stroke: white !important;
+}
+.container .about .about-flex .about-card span {
+    font-weight: bold;
+    font-size: 26px;
+}
+.container .about .about-flex .about-card p {
+    font-size: 12px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+
+
+.container .about-scroll .buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+.container .about-scroll .scroll .about-card2 {
+    min-width: calc(100% / 3);
+    height: 560px;
+}
+.container .about-scroll .scroll .about-card2 .img {
+    display: flex;
+    justify-content: center;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    height: 70%;
+}
+.container .about-scroll .scroll .about-card2 .img img {
+    width: 220px;
+}
+.container .about-scroll .scroll .about-card2 h3 {
+    font-weight: 600;
+}
+.container .about-scroll .scroll .about-card2 span {
+    font-weight: 500;
+    font-size: 14px;
+}
+.container .about-scroll .scroll .about-card2 .icons a {
+    text-decoration: none;
+    color: #0D0D0D;
+}
+.container .about-scroll .scroll .about-card2 .icons a i {
+    font-size: 18px;
+    transition: .2s;
+}
+.container .about-scroll .scroll .about-card2 .icons a i:hover {
+    color: var(--Primary);
+}
+
+/*     ======      End About HTML     ======      */
+
+
+
+
+/*     ======      Start contact HTML     ======      */
+
+
+.container .row .left-contact .top, .container .row .left-contact .down {
+    display: flex;
+    flex-direction: column;
+}
+.container .row .left-contact span {
+    font-size: 12px;
+    font-weight: 500;
+}
+.container .row .left-contact .head {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.container .row .right-contact {
+    margin-bottom: 120px;
+}
+.container .row .right-contact .row input, .container .row .right-contact .row textarea {
+    border: none;
+    outline: none;
+    background-color: #F5F5F5;
+}
+.container .row .right-contact .row textarea {
+    width: 100%;
+}
+.container .row .right-contact .row .button {
+    display: flex;
+    justify-content: flex-end;
+}
+.container .row .right-contact .row .button button {
+    border: none;
+    outline: none;
+    background-color: var(--Primary);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+}
+
+/*     ======      End contact HTML     ======      */
+
+

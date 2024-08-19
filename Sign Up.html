@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="up"><i class="fa-regular fa-circle-up"></i></div>
+
+<!-- Sart nav -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><h1>Exclusive</h1></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item me-3">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link active" href="blog.html">Sign Up</a>
+                </li>
+            </ul>
+            <form class="d-flex ms-lg-4" role="search">
+                <input class="form-control pt-1 pb-1 me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass ms-1 m-auto" id="searchI"></i>
+            </form>  
+        </div>
+    </div>
+
+</nav>
+<!-- End nav -->
+
+
+
+
+<!-- Start Sign Up -->
+<div class="sign-up row mt-5">
+    <div class="left-sign col-12 col-12 col-md-6 col-lg-6"></div>
+    <div class="right-sign col-12 col-md-6 col-lg-6 p-5">
+        <h3>Create an account</h3>
+        <span>Enter your details below</span>
+        <form action="">
+            <input class="mt-4 mb-4 p-2" type="text" placeholder="Name" required id="name">
+            <span class="p-2 span-val" id="span-name"><i class="fa-solid fa-exclamation"></i> The user name must contain [a-zA-Z] or "_" or [0-9]</span>
+            <input class="mb-4 p-2" type="text" placeholder="Email" required id="email">
+            <span class="p-2 span-val" id="span-email"><i class="fa-solid fa-exclamation"></i> The user name must contain (xxxxx@xxxx.xxx)</span>
+            <input class="p-2" type="password" placeholder="Password" required id="pass">
+            <span class="p-2 span-val" id="span-pass"><i class="fa-solid fa-exclamation"></i> The password is <span class="week">week</span>, please enter a difficult pass</span>
+            <i id="eye-slash" class="fa fa-eye-slash"></i>
+            <i id="eye" class="fa fa-eye"></i>
+            <input class="mt-5 p-2 submit" type="submit" value="Create Account" id="submit">
+        </form>
+        <button class="mt-3 p-2">
+            <a href="https://www.google.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <g clip-path="url(#clip0_943_3336)">
+                    <path d="M23.766 12.7764C23.766 11.9607 23.6999 11.1406 23.5588 10.3381H12.24V14.9591H18.7217C18.4528 16.4494 17.5885 17.7678 16.323 18.6056V21.6039H20.19C22.4608 19.5139 23.766 16.4274 23.766 12.7764Z" fill="#4285F4"/>
+                    <path d="M12.2401 24.5008C15.4766 24.5008 18.2059 23.4382 20.1945 21.6039L16.3276 18.6055C15.2517 19.3375 13.8627 19.752 12.2445 19.752C9.11388 19.752 6.45946 17.6399 5.50705 14.8003H1.5166V17.8912C3.55371 21.9434 7.7029 24.5008 12.2401 24.5008Z" fill="#34A853"/>
+                    <path d="M5.50253 14.8003C4.99987 13.3099 4.99987 11.6961 5.50253 10.2057V7.11481H1.51649C-0.18551 10.5056 -0.18551 14.5004 1.51649 17.8912L5.50253 14.8003Z" fill="#FBBC04"/>
+                    <path d="M12.2401 5.24966C13.9509 5.2232 15.6044 5.86697 16.8434 7.04867L20.2695 3.62262C18.1001 1.5855 15.2208 0.465534 12.2401 0.500809C7.7029 0.500809 3.55371 3.05822 1.5166 7.11481L5.50264 10.2058C6.45064 7.36173 9.10947 5.24966 12.2401 5.24966Z" fill="#EA4335"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_943_3336">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                Sign up with Google
+            </a>
+        </button>
+
+        <div class="mt-4 log-in">
+            <span>Already have account?</span>
+            <a href="login.html">Log in</a>
+        </div>
+    </div>
+</div>
+<!-- End Sign Up -->
+
+
+
+
+<!-- Sart footer -->
+<div class="footer mt-5 p-5">
+    <div class="exclusive mb-5">
+        <h3>Exclusive</h3>
+        <a href="">Subscribe</a>
+        <p>Get 10% off your first order</p>
+        <form action="">
+            <input class="p-2" type="email" placeholder="Enter your email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9.91199 11.9998H3.99999L2.02299 4.1348C2.01033 4.0891 2.00262 4.04216 1.99999 3.9948C1.97799 3.2738 2.77199 2.7738 3.45999 3.1038L22 11.9998L3.45999 20.8958C2.77999 21.2228 1.99599 20.7368 1.99999 20.0288C2.00201 19.9655 2.01313 19.9029 2.03299 19.8428L3.49999 14.9998" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </form>
+    </div>
+
+    <div class="support mb-5 pe-3">
+        <h3>Support</h3>
+        <a href="">111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.</a>
+        <a href="">exclusive@gmail.com</a>
+        <a href="">+88015-88888-9999</a>
+    </div>
+
+    <div class="account mb-5">
+        <h3>Account</h3>
+        <a href="">My Account</a>
+        <a href="">Login / Register</a>
+        <a href="">Cart</a>
+        <a href="">Wishlist</a>
+        <a href="">Shop</a>
+    </div>
+
+    <div class="quick-Link mb-5">
+        <h3>Quick Link</h3>
+        <a href="">Privacy Policy</a>
+        <a href="">Terms Of Use</a>
+        <a href="">FAQ</a>
+        <a href="">Contact</a>
+    </div>
+
+    <div class="download-app mb-5">
+        <h3>Download App</h3>
+        <p>Save $3 with App New User Only</p>
+        <div class="links">
+            <a href=""><img src="images/Qr Code.png" alt=""></a>
+            <div>
+                <a href=""><img src="images/png-transparent-google-play-store-logo-google-play-app-store-android-wallets-text-label-logo.png" alt=""></a>
+                <a href=""><img src="images/download-appstore.png" alt=""></a>
+            </div>
+        </div>
+        <div class="websits mt-3">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</div>
+<!-- End footer -->
+    
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/signUp.js"></script>
+</body>
+</html>

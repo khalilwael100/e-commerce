@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="up"><i class="fa-regular fa-circle-up"></i></div>
+
+    <!-- Sart nav -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><h1>Exclusive</h1></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item me-3">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="Sign Up.html">Sign Up</a>
+            </li>
+          </ul>
+          <form class="d-flex ms-lg-4" role="search">
+            <input
+              class="form-control pt-1 pb-1 me-2"
+              id="search"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass ms-1 m-auto"
+              id="searchI"
+            ></i>
+            <a href="cart.html" class="m-auto"
+              ><i class="fa-solid fa-cart-shopping ms-4 m-auto" id="cart"
+                ><span id="cart-count"></span></i
+            ></a>
+            <i class="fa-regular fa-user ms-4 m-auto p-1 user" id="user"></i>
+
+            <div class="account account-display p-2">
+              <div class="manage">
+                <a href=""
+                  ><i class="fa-regular fa-user me-2"></i>
+                  <span>Manage My Account</span></a
+                >
+              </div>
+              <div class="order">
+                <a href=""
+                  ><i class="fa-solid fa-bag-shopping me-2"></i>
+                  <span>My Order</span></a
+                >
+              </div>
+              <div class="cancel">
+                <a href=""
+                  ><i class="fa-solid fa-xmark me-1"></i>
+                  <span>My Cancellations</span></a
+                >
+              </div>
+              <div class="reviews">
+                <a href=""
+                  ><i class="fa-regular fa-star me-1"></i>
+                  <span>My Reviews</span></a
+                >
+              </div>
+              <div class="reviews">
+                <a href="login.html"
+                  ><i class="fa-solid fa-arrow-right-from-bracket me-1"></i>
+                  <span>Logout</span></a
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- End nav -->
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="left-manage col-md-4 col-lg-4 mt-5">
+          <h5>Manage My Account</h5>
+          <ul>
+            <li><a href="">My Profile</a></li>
+            <li><a href="">Address Book</a></li>
+            <li><a href="">My Payment Options</a></li>
+          </ul>
+
+          <h5>My Orders</h5>
+          <ul>
+            <li><a href="">My Returns</a></li>
+            <li><a href="">My Cancellations</a></li>
+          </ul>
+        </div>
+
+        <div class="right-manage col-md-8 col-lg-8 mt-5">
+          <h5>Edit Your Profile</h5>
+          <div class="row mt-4">
+            <div class="name1 col-6">
+              <label for="FN">First Name</label><br />
+              <input type="text" class="form-control mt-1 mb-3" id="FN" />
+            </div>
+
+            <div class="name2 col-6">
+              <label for="LN">Last Name</label><br />
+              <input type="text" class="form-control mt-1 mb-3" id="LN" />
+            </div>
+
+            <div class="email col-6">
+              <label for="E">Email</label><br />
+              <input type="text" class="form-control mt-1 mb-3" id="E" />
+            </div>
+
+            <div class="address col-6">
+              <label for="Add">Address</label><br />
+              <input type="text" class="form-control mt-1 mb-3" id="Add" />
+            </div>
+
+            <div class="password col-12">
+              <label for="Pass">Password Changes</label><br />
+              <input
+                type="password"
+                class="form-control mt-2 mb-3"
+                placeholder="Current Password"
+                id="Pass"
+              />
+              <input
+                type="password"
+                class="form-control mt-1 mb-3"
+                placeholder="New Password"
+              />
+              <input
+                type="password"
+                class="form-control mt-1 mb-3"
+                placeholder="Confirm New Password"
+              />
+            </div>
+
+            <div class="col-12 mt-4 mb-5 btns">
+              <button class="pt-2 pb-2 ps-3 pe-3 me-2 cancel-btn">
+                Cancel
+              </button>
+              <button class="pt-2 pb-2 ps-3 pe-3 save">Save Changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sart footer -->
+    <div class="footer mt-5 p-5">
+      <div class="exclusive mb-5">
+        <h3>Exclusive</h3>
+        <a href="">Subscribe</a>
+        <p>Get 10% off your first order</p>
+        <form action="">
+          <input class="p-2" type="email" placeholder="Enter your email" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M9.91199 11.9998H3.99999L2.02299 4.1348C2.01033 4.0891 2.00262 4.04216 1.99999 3.9948C1.97799 3.2738 2.77199 2.7738 3.45999 3.1038L22 11.9998L3.45999 20.8958C2.77999 21.2228 1.99599 20.7368 1.99999 20.0288C2.00201 19.9655 2.01313 19.9029 2.03299 19.8428L3.49999 14.9998"
+              stroke="#FAFAFA"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </form>
+      </div>
+
+      <div class="support mb-5 pe-3">
+        <h3>Support</h3>
+        <a href="">111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</a>
+        <a href="">exclusive@gmail.com</a>
+        <a href="">+88015-88888-9999</a>
+      </div>
+
+      <div class="account mb-5">
+        <h3>Account</h3>
+        <a href="">My Account</a>
+        <a href="">Login / Register</a>
+        <a href="">Cart</a>
+        <a href="">Wishlist</a>
+        <a href="">Shop</a>
+      </div>
+
+      <div class="quick-Link mb-5">
+        <h3>Quick Link</h3>
+        <a href="">Privacy Policy</a>
+        <a href="">Terms Of Use</a>
+        <a href="">FAQ</a>
+        <a href="">Contact</a>
+      </div>
+
+      <div class="download-app mb-5">
+        <h3>Download App</h3>
+        <p>Save $3 with App New User Only</p>
+        <div class="links">
+          <a href=""><img src="images/Qr Code.png" alt="" /></a>
+          <div>
+            <a href=""
+              ><img
+                src="images/png-transparent-google-play-store-logo-google-play-app-store-android-wallets-text-label-logo.png"
+                alt=""
+            /></a>
+            <a href=""><img src="images/download-appstore.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="websits mt-3">
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- End footer -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/manage.js"></script>
+  </body>
+</html>
